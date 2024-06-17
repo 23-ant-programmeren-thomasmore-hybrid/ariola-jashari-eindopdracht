@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000; /* Zwarte achtergrondkleur */
+}
+
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.Welcome-text {
+  background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.4)
+  ),
+  linear-gradient(90.01deg, #ff6f61 0.01%, #ffb88c 50.01%, #ff91a4 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGradient 5s ease infinite;
+}
+
+@keyframes textGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #ff9c8f1f;
+  display: flex;
+  position: relative;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.button-primary {
+  background: linear-gradient(
+          180deg,
+          rgba(255, 105, 97, 0) 0%,
+          rgba(255, 105, 97, 0.32) 100%
+  ),
+  rgba(255, 160, 122, 0.12);
+  box-shadow: inset 0 0 12px #ff9c8f3d;
+}
+
+.button-primary:hover {
+  background: linear-gradient(
+          180deg,
+          rgba(255, 105, 97, 0) 0%,
+          rgba(255, 105, 97, 0.42) 100%
+  ),
+  rgba(255, 160, 122, 0.24);
+  box-shadow: inset 0 0 12px #ff9c8f70;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(270deg, #000000, #ff0000, #000000);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+
